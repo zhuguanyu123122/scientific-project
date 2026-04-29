@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "sandra"
+version = "0.0.1"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [
+  "Sebastian Illing <sebastian.illing@vodafone.de>",
+  "Yuanfei Lin <yuanfei.lin@tum.de>"
+]
+description = "Safe large language model-based decision making framework for automated vehicles using reachability analysis"
+keywords = [
+    "automated driving",
+    "decision making",
+    "safety",
+    "large language models",
+    "reachability analysis"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"  # Adjust according to your project's needs
+openai = "~=1.82.0"
+pydantic = "~=2.11.5"
+gymnasium = "~=0.28.1"
+highway-env = "~=1.8.2"
+psutil = "~6.1.1"
+moviepy = ">=2.2.1"
+numpy = "<2.0.0"
+ollama = "~0.4.7"  # Add the appropriate version if known
+
+# commonroad-crime
+commonroad-io = "~2024.3"
+commonroad-reach = "~=2024.1.3"
+commonroad-crime = "~=0.4.0"
+commonroad-drivability-checker = "~2024.2"
+commonroad-route-planner = "~2024.2.0"
+commonroad-reactive-planner = "~2024.1.0"
+commonroad-prediction = "~0.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.test.dependencies]
+coverage = "^6.5.0"
+
+[tool.poetry.group.test]
+optional = true
+
